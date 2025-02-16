@@ -1,0 +1,89 @@
+ /* General Styles */
+ body {
+   /* background-image: url('favicon.jpg'); /* Ensure the filename matches */
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #585151;
+    background-attachment: fixed; /* Keeps the background in place while scrolling */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Center the container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #695757;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.card {
+    border: none;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #362828;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input field focus effect */
+.form-control:focus {
+    border-color: #3c2521;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #3c2521;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3c2521;
+}
+
+/* CV Output styling */
+.cv-container {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ddd;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight strong elements */
+.cv-container p strong {
+    color: #000000;
+}
+
+@media print {
+    body * {
+        visibility: hidden; /* Hide everything */
+    }
+    
+    #cvOutput, #cvOutput * {
+        visibility: visible; /* Show only the CV output */
+    }
+    
+    #cvOutput {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
